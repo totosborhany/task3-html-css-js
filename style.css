@@ -1,0 +1,904 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --default:#F9C265;
+ 
+
+}
+html,
+body {
+    
+    padding: 0;
+    margin: 0;
+/* background-color: black; */
+/* color: white; */
+}
+
+
+
+/* Nav */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--default);
+    align-items: center;
+}
+
+nav div#right {
+    display: flex;
+    gap: 30px;
+}
+
+
+nav div#right button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+nav div#right #dark-mode {
+        background-color: transparent;
+
+            padding: 17px;
+
+        
+      
+            transition: background-color 0.3s;
+}
+nav div#right #dark-mode:hover {
+
+        background-color: white;
+       
+    
+}
+
+
+
+nav div#right a {
+    padding-top: 20px;
+}
+
+nav div#left {
+    display: flex;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+nav a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+header {
+    padding: 200px 50px 0 50px;
+    background-color: var(--default);;
+}
+header #right_slide{
+    visibility: hidden;
+    position: fixed;
+        right: 0;
+     top: 0;
+        z-index: 1400;
+        width: 30%;
+        height: 100%;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+   font-size: 30px;
+   font-family: sans-serif;
+        border: none;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    transition: right 1s ease;
+         background-color: white;
+     
+       
+}  
+header #right_slide ul {
+list-style: none;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 60px;
+}
+header #right_slide li:hover{
+background-color: grey;
+    border-radius: 50px;
+}
+
+
+header #xbtn{
+    align-self:flex-start;
+    border: 0;
+    background-color: red;
+    margin-left: 40px;
+    padding: 10px;
+
+}
+header #right_slide .cus_cont{
+    display: flex;
+    align-items: center;
+justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+ 
+
+}
+header #right_slide .cus_cont #blue{
+   width: 50px;
+   height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    
+}
+header #right_slide .cus_cont #default{
+   width: 50px;
+   height: 50px;
+    background-color:#F9C265;
+    border-radius: 50%;
+}
+header #right_slide .cus_cont #green{
+   width: 50px;
+   height: 50px;
+    background-color: green;
+    border-radius: 50%;
+}
+header #right_slide .cus_cont #red{
+   width: 50px;
+   height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+header #settings{
+position: fixed;
+    position: fixed;
+        transform: rotate(270deg);
+        right: 1px;
+        padding: 12px 18px;
+        background-color: grey;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        z-index: 9999;
+}
+header img {
+    padding-bottom: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+header div {
+    display: flex;
+    gap: 70px;
+    justify-content: space-around;
+}
+
+header div#right {
+    display: block;
+}
+
+header p {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+
+header h1 {
+    font-size: 80px;
+    font-family: sans-serif;
+    grid-row: span 2;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    justify-self: center;
+    transform: translate(-10px, -80px);
+}
+
+header span {
+    background-color: black;
+    padding: 5px;
+    border-radius: 20px;
+    color: var(--default);;
+}
+
+/* Main - Reviews */
+main #reviews {
+    display: flex;
+    padding: 70px;
+    justify-content: space-around;
+}
+
+main #reviews h3 {
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+main .review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Main - Provide */
+main div#provide {
+    background-color: #FDF6E4;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    font-family: sans-serif;
+}
+
+main div#provide img {
+    grid-row: span 2;
+}
+
+main div#provide h2 {
+    font-size: 50px;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+main div#provide span {
+    background-color: var(--default);;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+main div#provide p {
+    font-size: 30px;
+   
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    white-space: nowrap;
+        overflow: hidden;
+}
+
+/* Main - Features */
+main #features {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+        background-size:contain;
+        
+        background-position: center top;
+}
+
+main #features #our {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    grid-column: span 2;
+    border-radius: 15px;
+    border:2px solid var(--default);;
+}
+
+main #features #our h2 {
+    font-size: 50px;
+    font-family: sans-serif;
+    padding-bottom: 30px;
+}
+
+main #features #our button {
+    background-color: var(--default);;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+main #features .container {
+ 
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 15px;
+    padding: 50px;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+main #features .container h3 {
+    font-size: 30px;
+}
+
+main #features .container p {
+    padding-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    white-space: nowrap;
+        /* prevents wrapping */
+        overflow: hidden;
+}
+
+main #features span {
+    color: var(--default);;
+}
+
+/* Main - Popular */
+main #popular {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 100px 200px;
+}
+
+main #popular span {
+    padding: 10px;
+    background-color: black;
+    color: var(--default);;
+    border-radius: 25px;
+    border: 1px solid var(--default);;
+}
+
+main #popular h2 {
+    padding-bottom: 150px;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+main #popular #inside_popular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+main #popular .pack {
+    display: block;
+    color: black;
+    background-color: white;
+    flex-basis: 30%;
+    padding: 30px;
+    border-radius: 25px;
+    height: 100%;
+}
+
+main #popular .pack .body {
+    padding-top: 10px;
+    padding-bottom: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    gap: 20px;
+}
+
+main #popular .pack .body .english {
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+main #popular .pack .body button {
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 20px;
+    width: 50%;
+}
+
+/* Main - Easy */
+main #easy {
+    font-family: sans-serif;
+    padding: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 400px;
+}
+main #easy #left{
+padding-right: 40px;
+flex-basis: 0px;
+flex-grow: 1;
+flex-shrink: 2;
+}
+main #easy #right {
+flex-basis: 100%;
+}
+main #easy #right img{
+width: 100%;
+height: 100%;
+}
+main #easy span {
+    background-color: var(--default);;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+main #easy h2 {
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+main #easy p {
+    padding-bottom: 30px;
+    white-space: nowrap;
+        /* prevents wrapping */
+        overflow: hidden;
+        /* hides extra text */
+      
+}
+
+main #easy ul {
+    font-size: 30px;
+    list-style: georgian;
+}
+
+/* Footer */
+footer {
+    height: 1100px;
+    position: relative;
+    background-color: #FDF6E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+footer span {
+    background-color: var(--default);;
+    border: 1px solid black;
+    color: black;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+footer h2 {
+    font-size: 50px;
+}
+
+footer #play {
+    padding-top: 350px;
+    padding-bottom: 150px;
+}
+
+footer #upper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    height: 350px;
+    min-width: 500px;
+    top: -170px;
+    padding: 50px;
+    background-color: var(--default);;
+    gap: 20px;
+    border-radius: 30px;
+}
+
+footer #upper img {
+    width: 50%;
+    display: block;
+    padding-bottom: 0;
+}
+
+footer #upper #upper_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+footer #upper h3 {
+    font-size: 40px;
+}
+
+footer #upper p {
+    font-size: 20px;
+}
+
+footer #upper button {
+    background-color: black;
+    color: var(--default);;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+footer #last {
+    background-color: black;
+    padding: 100px;
+    width: 60%;
+    height: 80%;
+    min-height: 500px;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #last div#top {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer #last div#top #left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 70px;
+}
+
+footer #last div#top #right {
+    display: flex;
+    gap: 100px;
+}
+
+footer #last #bottom {
+    padding-top: 60px;
+    display: flex;
+    gap: 100px;
+    justify-content: space-around;
+    align-items: end;
+}
+
+/* Media Queries */
+@media (max-width: 1500px) {
+    #provide img {
+        width: 90%;
+    }
+
+    #provide h2 {
+        padding-bottom: 20px;
+    }
+main #popular #inside_popular {
+   
+    gap: 100px;
+}
+main #popular .pack img{
+width: 70%;
+}
+header #settings {
+
+       
+            right: 1px;
+            padding: 5px 10px;
+            font-size: 11px;
+}
+
+main #popular .pack {
+    display: block;
+    color: black;
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    border-radius: 25px;
+    height: 100%;
+min-width: 200px;    
+}
+
+main #popular .pack .body {
+    padding-top: 10px;
+    padding-bottom: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    gap: 20px;
+}
+
+
+
+main #popular .pack .body button {
+    white-space: nowrap;
+       
+    padding: 20px;
+    min-width:90% ;
+}
+
+
+main #easy {
+    font-family: sans-serif;
+    padding: 200px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 250px;
+}
+main #easy img{
+    width: 100%;
+}
+main #easy span {
+    background-color: var(--default);;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+main #easy h2 {
+    line-height: 2;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+main #easy p {
+    padding-bottom: 30px;
+}
+
+main #easy ul {
+    font-size: 30px;
+    list-style: georgian;
+}
+
+
+footer #upper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    height: 350px;
+   
+    top: -170px;
+    padding: 50px;
+    background-color: var(--default);;
+    gap: 20px;
+    border-radius: 30px;
+}
+footer #upper IMG{
+width: 60%;
+}
+
+main div#provide h2 {
+    font-size: 40px;
+    padding: 10px;
+    padding-bottom: 25px;
+}
+
+main div#provide p {
+    font-size: 20px;
+}
+}
+@media (max-width: 1500px) {
+
+
+
+}
+
+
+@media (max-width: 1050px) {
+    header {
+        padding-top: 40px;
+    }
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    header img {
+        padding-top: 10px;
+        width: 70%;
+    }
+
+    main #provide img {
+        width: 90%;
+    }
+
+    main #provide p {
+        font-size: 10px;
+    }
+
+    main #provide h2 {
+        font-size: 10px;
+    }
+
+    main #reviews {
+        gap: 20px;
+    }
+        main #popular h2{
+            white-space: nowrap;
+                
+        }
+main #popular #inside_popular {
+    padding: 20px;
+    gap: 90px;
+}
+main #popular .pack  {
+    min-width: 180px;
+}
+main #popular .pack .body .english {
+    font-size: 15px;
+    font-weight: bold;
+}
+    main #reviews p:last-child {
+        white-space: nowrap;
+     
+    }
+
+
+        main #easy h2 {
+            font-size: 40px;
+            line-height: 2;
+            padding-bottom: 30px;
+        }
+    
+        main #easy p {
+            padding-bottom: 30px;
+            font-size: 20px;
+        }
+                main #easy ul {
+                    font-size: 20px;
+                    list-style: georgian;
+                }
+        footer #upper {
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 650px;
+            height: 350px;
+    
+            top: -170px;
+            padding: 50px;
+            padding-top: 100px;
+            background-color: var(--default);;
+            gap: 20px;
+            border-radius: 30px;
+        }
+                footer #upper img{
+                    width: 75%;
+                }
+                                footer #last {
+                                    background-color: black;
+                                    padding: 100px;
+                                    width: 80%;
+                                    height: 60%;
+                                    min-height: 500px;
+                                    border-radius: 30px;
+                                    color: white;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                                                main #easy img {
+                                                                    width :100%;
+                                                                }
+}
+
+@media (max-width: 890px){
+main div#provide h2 {
+        font-size: 40px;
+        padding: 10px;
+        padding-bottom: 5px;
+    }
+        main div#provide p{
+            font-size: 20px;
+        }
+}
+@media (max-width: 750px) {
+    main div#provide h2 {
+        font-size: 30px;
+        line-height: 1.5;
+        padding: 10px;
+        padding-bottom: 15px;
+    }
+
+    main div#provide p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 800px) {
+main #popular #inside_popular {
+    padding: 30px;
+    gap: 75px;
+}
+
+
+main #features {
+    padding: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+ 
+}
+main #features .container {
+
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    border-radius: 15px;
+    padding: 30px;
+    font-family: sans-serif;
+}
+main #features .container h3 {
+   
+    font-size: 20px;
+}
+main #features .container p {
+    padding-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 19px;
+}
+
+   footer #upper {
+       position: absolute;
+       top: 0;
+       display: flex;
+       justify-content: space-between;
+       width: 500px;
+       height: 350px;
+
+       top: -170px;
+       padding: 50px;
+       background-color: var(--default);;
+       gap: 20px;
+       border-radius: 30px;
+
+   }
+
+   footer #upper h3{
+    font-size: 30px;
+   }footer #upper p {
+    font-size: 15px;
+
+}
+footer h2{
+    font-size: 40px;
+}
+footer #last {
+    background-color: black;
+    padding: 100px;
+    width: 80%;
+    height: 60%;
+    min-height: 500px;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main #easy {
+    font-family: sans-serif;
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 300px;
+    gap: 10px;
+}
+main #easy #right{
+    width: 100%;
+}
+
+}
