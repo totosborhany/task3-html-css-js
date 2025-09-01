@@ -2,22 +2,41 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+font-family: "Libre Baskerville",sans-serif serif;
+    font-weight: 400;
+    font-style: normal;
 }
 :root{
     --default:#F9C265;
  
 
 }
+body{
+   width: 100%;
+}
 html,
 body {
-    
+  
     padding: 0;
     margin: 0;
+    height: 100%;
+    overflow-x: hidden;
 /* background-color: black; */
 /* color: white; */
 }
 
-
+div#the-box{
+    display: none;
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(200, 200, 200,0.5);
+   z-index: 998;
+}
 
 /* Nav */
 
@@ -32,7 +51,14 @@ nav div#right {
     display: flex;
     gap: 30px;
 }
-
+#ham-icon{
+    display: none;
+    padding: 10px;
+                transition: background-color 0.3s;
+}
+#ham-menu{
+    display: none;
+}
 
 nav div#right button {
     background-color: black;
@@ -50,10 +76,10 @@ nav div#right #dark-mode {
       
             transition: background-color 0.3s;
 }
-nav div#right #icon:hover {
+nav div#right #dark-mode:hover {
 
-        background-color: white;
-       
+       width: 22;
+       background-color: white;
 
 }
 
@@ -108,7 +134,8 @@ header #right_slide{
         right: 0;
      top: 0;
         z-index: 1400;
-        width: 20%;
+        min-width:20%;
+       
         height: 100%;
         border-radius: 12px;
         display: flex;
@@ -124,6 +151,8 @@ header #right_slide{
      
        
 }  
+
+
 header #right_slide ul {
 list-style: none;
 display: flex;
@@ -224,12 +253,15 @@ position: fixed;
         font-size: 16px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         transition: background-color 0.3s, color 0.3s, transform 0.2s;
-        z-index: 9999;
+        z-index: 997;
 }
 header img {
-    padding-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 0px;
     display: block;
     margin: 0 auto;
+  object-fit: contain;
+
 }
 
 header div {
@@ -249,8 +281,7 @@ header p {
 }
 
 header h1 {
-    font-size: 80px;
-    font-family: sans-serif;
+font-size: clamp(1.8rem, 5vw, 6rem);    font-family: sans-serif;
     grid-row: span 2;
 }
 
@@ -274,13 +305,15 @@ header span {
 /* Main - Reviews */
 main #reviews {
     display: flex;
-    padding: 70px;
+    padding: min(70px, 50%);
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 main #reviews h3 {
-    font-size: 40px;
+    font-size: clamp(2rem, 2.5rem, 5rem);
     font-family: sans-serif;
+    font-weight: bold;
 }
 
 main .review {
@@ -290,11 +323,10 @@ main .review {
     align-items: center;
     gap: 10px;
 }
-
 /* Main - Provide */
 main div#provide {
     background-color: #FDF6E4;
-    padding: 100px;
+    padding: min(100px,8%);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
@@ -324,32 +356,28 @@ main div#provide p {
     color: rgba(0, 0, 0, 0.5);
     padding-top: 20px;
     white-space: nowrap;
-        overflow: hidden;
+        overflow:inherit;
 }
 
 /* Main - Features */
 main #features {
-    padding: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    background-repeat: no-repeat;
-        background-size:contain;
-        
-        background-position: center top;
+display: flex;
+flex-wrap:wrap;
+justify-content: center;
+align-content: center;
+gap: 5rem;
+padding: min(10rem,8%);
 }
 
 main #features #our {
     background-color: black;
     color: white;
-    padding: 50px;
-    grid-column: span 2;
+    padding: min(50px,8%);
     border-radius: 15px;
     border:2px solid var(--default);;
+    min-width: 60%;
+flex-shrink: 0;
+flex-grow: 1;
 }
 
 main #features #our h2 {
@@ -365,10 +393,10 @@ main #features #our button {
 }
 
 main #features .container {
- 
+
     border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 15px;
-    padding: 50px;
+padding: min(50px, 8%);
     font-family: sans-serif;
     background-color: white;
 }
@@ -380,8 +408,7 @@ main #features .container h3 {
 main #features .container p {
     padding-top: 10px;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    white-space: nowrap;
+font-size: clamp(0.8rem, 1.5vw, 1rem);    white-space: nowrap;
         /* prevents wrapping */
         overflow: hidden;
 }
@@ -396,6 +423,7 @@ main #popular {
     color: white;
     text-align: center;
     padding: 100px 200px;
+   
 }
 
 main #popular span {
@@ -410,6 +438,7 @@ main #popular h2 {
     padding-bottom: 150px;
     font-size: 40px;
     font-family: sans-serif;
+    white-space: nowrap;
 }
 
 main #popular #inside_popular {
@@ -459,8 +488,8 @@ main #easy {
     font-family: sans-serif;
     padding: 200px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: start;
     gap: 10px;
     padding-bottom: 400px;
 }
@@ -474,8 +503,8 @@ main #easy #right {
 flex-basis: 100%;
 }
 main #easy #right img{
-width: 100%;
-height: 100%;
+width: 50%;
+
 }
 main #easy span {
     background-color: var(--default);;
@@ -505,7 +534,7 @@ main #easy ul {
 
 /* Footer */
 footer {
-    height: 1100px;
+    height: 90%;
     position: relative;
     background-color: #FDF6E4;
     display: flex;
@@ -525,11 +554,12 @@ footer span {
 
 footer h2 {
     font-size: 50px;
+    
 }
 
 footer #play {
-    padding-top: 350px;
-    padding-bottom: 150px;
+    padding-top: 0px;
+    padding-bottom: 250px;
 }
 
 footer #upper {
@@ -539,7 +569,7 @@ footer #upper {
     justify-content: space-between;
     width: 1100px;
     height: 350px;
-    min-width: 500px;
+    MAX-width: 80%;
     top: -170px;
     padding: 50px;
     background-color: var(--default);;
@@ -577,17 +607,18 @@ footer #upper button {
 }
 
 footer #last {
+    position: absolute;
     background-color: black;
     padding: 100px;
-    width: 60%;
-    height: 80%;
-    min-height: 500px;
-    border-radius: 30px;
+width: 1100px;
+    height: 350px;
+MAX-width: 80%;    border-radius: 30px;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 0;
 }
 
 footer #last div#top {
@@ -616,339 +647,219 @@ footer #last #bottom {
     align-items: end;
 }
 
+
+
+
 /* Media Queries */
-@media (max-width: 1500px) {
-    #provide img {
-        width: 90%;
-    }
 
-    #provide h2 {
-        padding-bottom: 20px;
-    }
-main #popular #inside_popular {
-   
-    gap: 100px;
-}
-main #popular .pack img{
-width: 70%;
-}
-header #settings {
-
-       
-            right: 1px;
-            padding: 5px 10px;
-            font-size: 11px;
-}
-
-main #popular .pack {
-    display: block;
-    color: black;
-    background-color: white;
-    width: 100%;
-    padding: 30px;
-    border-radius: 25px;
-    height: 100%;
-min-width: 200px;    
-}
-
-main #popular .pack .body {
-    padding-top: 10px;
-    padding-bottom: 0;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-self: flex-start;
-    gap: 20px;
-}
-
-
-
-main #popular .pack .body button {
-    white-space: nowrap;
-       
-    padding: 20px;
-    min-width:90% ;
-}
-
-
-main #easy {
-    font-family: sans-serif;
-    padding: 200px;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 250px;
-}
-main #easy img{
-    width: 100%;
-}
-main #easy span {
-    background-color: var(--default);;
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 10px;
-}
-
-main #easy h2 {
-    line-height: 2;
-    font-size: 50px;
-    padding-bottom: 30px;
-}
-
-main #easy p {
-    padding-bottom: 30px;
-}
-
-main #easy ul {
-    font-size: 30px;
-    list-style: georgian;
-}
-
-
-footer #upper {
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 900px;
-    height: 350px;
-   
-    top: -170px;
-    padding: 50px;
-    background-color: var(--default);;
-    gap: 20px;
-    border-radius: 30px;
-}
-footer #upper IMG{
-width: 60%;
-}
-
-main div#provide h2 {
-    font-size: 40px;
-    padding: 10px;
-    padding-bottom: 25px;
-}
-
-main div#provide p {
-    font-size: 20px;
-}
-}
-@media (max-width: 1500px) {
-
-
-
-}
-
-
-@media (max-width: 1050px) {
-    header {
-        padding-top: 40px;
-    }
-
-    header h1 {
-        font-size: 60px;
-    }
-
-    header p {
-        font-size: 20px;
-    }
-
+@media (max-width: 1536px) {
     header img {
-        padding-top: 10px;
         width: 70%;
     }
 
-    main #provide img {
-        width: 90%;
-    }
-
-    main #provide p {
-        font-size: 10px;
-    }
-
-    main #provide h2 {
-        font-size: 10px;
-    }
-
-    main #reviews {
-        gap: 20px;
-    }
-        main #popular h2{
-            white-space: nowrap;
-                
-        }
-main #popular #inside_popular {
-    padding: 20px;
-    gap: 90px;
-}
-main #popular .pack  {
-    min-width: 180px;
-}
-main #popular .pack .body .english {
-    font-size: 15px;
-    font-weight: bold;
-}
-    main #reviews p:last-child {
-        white-space: nowrap;
-     
-    }
-
-
-        main #easy h2 {
-            font-size: 40px;
-            line-height: 2;
-            padding-bottom: 30px;
-        }
-    
-        main #easy p {
-            padding-bottom: 30px;
-            font-size: 20px;
-        }
-                main #easy ul {
-                    font-size: 20px;
-                    list-style: georgian;
-                }
-        footer #upper {
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: space-between;
-            width: 650px;
-            height: 350px;
-    
-            top: -170px;
-            padding: 50px;
-            padding-top: 100px;
-            background-color: var(--default);;
-            gap: 20px;
-            border-radius: 30px;
-        }
-                footer #upper img{
-                    width: 75%;
-                }
-                                footer #last {
-                                    background-color: black;
-                                    padding: 100px;
-                                    width: 80%;
-                                    height: 60%;
-                                    min-height: 500px;
-                                    border-radius: 30px;
-                                    color: white;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    align-items: center;
-                                }
-                                                                main #easy img {
-                                                                    width :100%;
-                                                                }
-}
-
-@media (max-width: 890px){
-main div#provide h2 {
-        font-size: 40px;
-        padding: 10px;
-        padding-bottom: 5px;
-    }
-        main div#provide p{
-            font-size: 20px;
-        }
-}
-@media (max-width: 750px) {
-    main div#provide h2 {
-        font-size: 30px;
-        line-height: 1.5;
-        padding: 10px;
-        padding-bottom: 15px;
-    }
-
-    main div#provide p {
-        font-size: 15px;
-    }
-}
-@media (max-width: 800px) {
-main #popular #inside_popular {
-    padding: 30px;
-    gap: 75px;
-}
-
-
-main #features {
-    padding: 200px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
- 
-}
-main #features .container {
-
-    border: 1px solid rgba(0, 0, 0, 0.02);
-    border-radius: 15px;
-    padding: 30px;
-    font-family: sans-serif;
-}
-main #features .container h3 {
-   
-    font-size: 20px;
-}
-main #features .container p {
-    padding-top: 10px;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 19px;
-}
-
-   footer #upper {
-       position: absolute;
-       top: 0;
-       display: flex;
-       justify-content: space-between;
-       width: 500px;
-       height: 350px;
-
-       top: -170px;
-       padding: 50px;
-       background-color: var(--default);;
-       gap: 20px;
-       border-radius: 30px;
-
-   }
-
-   footer #upper h3{
-    font-size: 30px;
-   }footer #upper p {
-    font-size: 15px;
-
-}
-footer h2{
-    font-size: 40px;
-}
-footer #last {
-    background-color: black;
-    padding: 100px;
-    width: 80%;
-    height: 60%;
-    min-height: 500px;
-    border-radius: 30px;
-    color: white;
+main div#provide {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-main #easy {
-    font-family: sans-serif;
-    padding: 100px;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 300px;
+main div#provide img {
+    grid-row: span 1;
+    width: 60%;
+}
+}
+@media (max-width: 1280px) {
+
+ a#settings{
+    padding: 10px;
+    right: -15px;
+}
+
+header img {
+        width: 50%;
+    }
+    main #popular #inside_popular {
+        flex-direction: column;
+    gap: 4rem;
+    }
+
+
+
+        main #easy{
+            flex-direction: column;
+          
+        }
+                           main #easy #right img {
+                              order: -1;
+                              align-self: flex-start;
+            
+                           }
+ }
+@media (max-width: 1024px) {
+
+        .slider-wrapper {
+                overflow: hidden;
+                width: 100%;
+            }
+        
+            main #reviews {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                transition: transform 0.5s ease-in-out;
+            }
+        
+            main .review {
+                min-width: 100%;
+                flex: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* centers horizontally */
+                text-align: center;
+                /* centers text */
+            }
+    header img {
+            width: 60%;
+        }
+main #reviews {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    main #reviews h3 {
+   font-size: 2rem;
+}
+footer #upper{
+    gap: 30px;
+}
+footer #upper,footer #last{
+    
+    min-width: 200px;
+}
+footer #upper #upper_left {
     gap: 10px;
-}
-main #easy #right{
-    width: 100%;
 }
 
 }
+@media (max-width: 768px) {
+
+#ham-icon{
+    display: block;
+}
+#ham-icon:hover{
+    background-color: white;
+    padding: 10px;
+}
+
+#ham-menu{
+    z-index: 999;
+    display: none;
+    background-color: white;
+    width: 40%;
+    height: 80vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 50px;
+padding: 50px;
+flex-direction: column;
+gap: 30px;
+justify-content:start ;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+border-radius: 15px;
+}
+
+#ham-menu.show {
+    display: flex;
+}
+#ham-menu a{
+    border-bottom:1px solid black;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+nav #left a,nav #right #log-in{
+    display: none;
+}
+    header a{
+        padding: 8px;
+    }
+main #popular{
+    padding-left: 150px;
+}
+
+    a#settings {
+            padding: 5px;
+            right: -20px;
+            
+        }
+    header {
+        padding-top: 100px;
+    }
+
+    main #easy {
+            padding: 100px;
+            padding-bottom: 200px;
+        }
+    main #reviews{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+main #reviews h3 {
+        font-size: 1.5rem;
+    }
+        main #reviews p {
+            font-size: 1rem;
+        }
+
+        footer #last #bottom {
+  padding: 50px;
+            padding-top: 30px;
+    display: flex;
+    gap: 50px;
+   
+}
+
+footer{
+    height: 70%;
+}
+                  footer #upper h3 {
+                      font-size: 2rem;
+                  }
+
+
+                                  footer h2 {
+                                      font-size: 30px;
+                
+                                  }
+}
+@media (max-width: 480px) {
+
+#ham-menu {
+        width: 50%;
+    }
+
+    header a {
+            padding: 6px;
+        }
+main #popular {
+        padding-left: 150px;
+    }
+main #easy {
+    padding: 100px;
+    padding-bottom: 200px;
+}
+main #reviews {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+        main #reviews h3{
+            font-size: 1rem;
+        }
+                main #reviews p{
+
+                    font-size: 0.9rem;
+                }
+        footer #upper h3{
+            font-size: 1.5rem;
+        }
+}
+

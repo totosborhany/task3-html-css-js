@@ -10,6 +10,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manufacturing+Consent&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
     <style></style>
     <link rel="stylesheet" href="./style.css">
     
@@ -17,7 +22,22 @@
 
 <body>
 
+<div id="the-box"></div>
+
     <nav>
+        <a id="ham-icon" >☰</a>
+        <div id ="ham-menu">
+            
+           <a href="#">Log in </a>
+
+         <a href="#">Helpme</a> 
+        
+        <a href="#">Blog</a> 
+        
+       <a href="#">Course</a> 
+
+</ul>
+        </div>
        <div id="left">
         <a href="#">Helpme</a>
         
@@ -31,10 +51,10 @@
         <div id ="right">
      <a id="dark-mode">
         
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-moon-fill"
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high"
         viewBox="0 0 16 16">
         <path
-            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
     </svg>
 
      </a>
@@ -65,7 +85,7 @@
 
      </ul>
         
-        <a href="#">Log in </a>
+        <a href="#" id="log-in">Log in </a>
         
         <button>Sign up</button>
     </div>
@@ -99,6 +119,7 @@
                     d="M195.1 9.5C198.1-5.3 211.2-16 226.4-16l59.8 0c15.2 0 28.3 10.7 31.3 25.5L332 79.5c14.1 6 27.3 13.7 39.3 22.8l67.8-22.5c14.4-4.8 30.2 1.2 37.8 14.4l29.9 51.8c7.6 13.2 4.9 29.8-6.5 39.9L447 233.3c.9 7.4 1.3 15 1.3 22.7s-.5 15.3-1.3 22.7l53.4 47.5c11.4 10.1 14 26.8 6.5 39.9l-29.9 51.8c-7.6 13.1-23.4 19.2-37.8 14.4l-67.8-22.5c-12.1 9.1-25.3 16.7-39.3 22.8l-14.4 69.9c-3.1 14.9-16.2 25.5-31.3 25.5l-59.8 0c-15.2 0-28.3-10.7-31.3-25.5l-14.4-69.9c-14.1-6-27.2-13.7-39.3-22.8L73.5 432.3c-14.4 4.8-30.2-1.2-37.8-14.4L5.8 366.1c-7.6-13.2-4.9-29.8 6.5-39.9l53.4-47.5c-.9-7.4-1.3-15-1.3-22.7s.5-15.3 1.3-22.7L12.3 185.8c-11.4-10.1-14-26.8-6.5-39.9L35.7 94.1c7.6-13.2 23.4-19.2 37.8-14.4l67.8 22.5c12.1-9.1 25.3-16.7 39.3-22.8L195.1 9.5zM256.3 336a80 80 0 1 0 -.6-160 80 80 0 1 0 .6 160z" />
             </svg></i>
         </a>
+       
         <h1 >Improve Your<br> <span>Skills</span> Faster </h1>  
         <div id="right">
         <p>speed up the skill application process by <br>finding unlimited courses that matters<br> to you </p>
@@ -118,41 +139,67 @@
 
 
     <main>
-        <div id="reviews">
-            <div class="review">
+<div class="slider-wrapper">
+    <div id="reviews">
+        <div class="review">
             <h3>4.5</h3>
             <p>reviews</p>
-            </div>|
-<div class="review">
+        </div>
+        <div class="review">
             <h3>30M</h3>
-            <p>enrollments</p></div>|
- <div class="review">
+            <p>enrollments</p>
+        </div>
+        <div class="review">
             <h3>2M+</h3>
-            <p>locations</p></div>|
-            <div class="review">
+            <p>locations</p>
+        </div>
+        <div class="review">
             <h3>1k+</h3>
             <p>popular courses</p>
-            </div>
         </div>
-
+    </div>
+</div>
         <div id="provide">
         <img src="./need this.png">
         <h2>We provide<br> <span> Smart </span>online<br> Education.</h2>
         <p>Lorem ipsum dolor sit amet<br> consectetur adipisicing elit. Alias, odio<br> perspiciatis? Harum libero consequatur, at <br>accusamus quisquam suscipit odit quidem. Cupiditate necessitatibus ullam facere <br>dolorem ducimus quae labore inventore? Blanditiis?</p>
         </div>
-        <div id="features">
-        <div id ="our" ><h2>Our <span> features </span><br> Special For you</h2> 
-        <a> <button>see all features ↗</button></a>        
+    <div id="features">
+        
+            <div id="our">
+                <h2>Our <span>features</span><br> Special For you</h2>
+                <a href="#"><button>see all features ↗</button></a>
+            </div>
+    
+
+            
+            <div id="instructor" class="container">
+                <img src="./cartoon-flight-instructor-standing-next-to-blackboard-showing-air-maneuvers-44887956.webp"
+                    width="50px">
+                <h3>Amazing instructor</h3>
+                <p>we provide<br> amazing instructors</p>
         </div>
-        <div id="certified" class="container"> <img src="./7904390.png" width="50px"> <h3>get certifact</h3><p> we provide <br>good certificates</p></div>
-        <div id="instructor" class="container"><img src="./cartoon-flight-instructor-standing-next-to-blackboard-showing-air-maneuvers-44887956.webp" width="50px"> <h3>Amazing instructor</h3><p> we provide<br> amazing instructors</p></div>
-        <div id="support" class="container"><img src="./cartoon-flight-instructor-standing-next-to-blackboard-showing-air-maneuvers-44887956.webp" width="50px">
-        <h3>life time support </h3>
-        <p> we provide<br> amazing life time support</p></div>
-        <div id="video" class="container"><img src="./images.png" width="50px">
-        <h3>video lesson</h3>
-        <p> we provide <br>amazing interative videos</p></div>
-            </div>   
+    
+            <div id="support" class="container">
+                <img src="./cartoon-flight-instructor-standing-next-to-blackboard-showing-air-maneuvers-44887956.webp"
+                    width="50px">
+                <h3>Life time support</h3>
+                <p>we provide<br> amazing life time support</p>
+            </div>
+       
+            <div id="certified" class="container">
+                <img src="./7904390.png" width="50px">
+                <h3>Get certificate</h3>
+                <p>we provide <br> good certificates</p>
+            </div>
+    
+            <div id="video" class="container">
+                <img src="./images.png" width="50px">
+                <h3>Video lessons</h3>
+                <p>we provide <br> amazing interactive videos</p>
+            </div>
+       
+    </div>
 
     
    <div id="popular">
@@ -207,7 +254,7 @@
 </div>
 </div>
 <div id ="bottom">
-<p>© copyright reserved to ahmed abdelrahman </p><p>terms&conditions privacy policy</p>
+<p>© copyright reserved to ahmed abdelrahman v3</p><p>terms&conditions privacy policy</p>
 </div>
 </div>
 </footer>
